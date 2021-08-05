@@ -1,0 +1,38 @@
+{
+  "name": "gsotp",
+  "version": "1.0.0",
+  "description": "gsotp.com node.js library",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "tsc --watch",
+    "prepack": "tsc",
+    "test": "jest src **/*.test.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GlobalSmartOTP/nodejs-lib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GlobalSmartOTP/nodejs-lib/issues"
+  },
+  "homepage": "https://github.com/GlobalSmartOTP/nodejs-lib#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.11",
+    "dotenv": "^10.0.0",
+    "jest": "^27.0.6",
+    "typescript": "^4.3.5"
+  },
+  "engines": {
+    "node": ">=10.19.0"
+  },
+  "dependencies": {
+    "got": "^11.8.2"
+  }
+}
