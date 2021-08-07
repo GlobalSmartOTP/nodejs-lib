@@ -4,11 +4,14 @@
 ## Documents
 [Full documentation is here.](https://globalsmartotp.github.io/nodejs-lib)
 
-## Simple usage example
+## Install
+```bash
+npm install gsotp
+```
 
-### Send OTP Code
+## Send OTP Code
 ```js
-const GsOTP = require('gsotp')
+const { GsOTP } = require('gsotp')
 const otp = new GsOTP(API_KEY)
 
 otp.sendSMS({
@@ -25,7 +28,7 @@ otp.sendSMS({
 })
 ```
 
-### Verify OTP Code
+## Verify OTP Code
 ```js
 otp.verify({
   mobile: '09333333333',
