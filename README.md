@@ -1,6 +1,6 @@
 <p dir="rtl">بسم الله الرّحمن الرّحیم</p>
 
-# [gsOTP.com](gsOTP.com) Node.js SDK
+# [gsOTP.com](https://gsotp.com) Node.js SDK
 ## Documents
 [Full documentation is here.](https://globalsmartotp.github.io/nodejs-lib)
 

@@ -29,7 +29,7 @@ test('get otp status', () => {
 
 test('verify otp', () => {
   return otp.verify({
-    mobile: '09373495980',
+    mobile: '09333333333',
     otp: '3305',
   })
     .then(r => {
