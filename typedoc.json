@@ -1,0 +1,17 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "gsOTP.com Node.js SDK Documents",
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "sort": [
+    "kind",
+    "instance-first",
+    "source-order"
+  ],
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "theme": "minimal",
+  "watch": true
+}

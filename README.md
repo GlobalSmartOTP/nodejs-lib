@@ -1,6 +1,6 @@
 <p dir="rtl">بسم الله الرّحمن الرّحیم</p>
 
-# gsOTP Node.js SDK
+# [gsOTP.com](gsOTP.com) Node.js SDK
 
 ## Simple usage example
 
