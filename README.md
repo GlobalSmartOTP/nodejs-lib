@@ -1,6 +1,8 @@
 <p dir="rtl">بسم الله الرّحمن الرّحیم</p>
 
 # [gsOTP.com](gsOTP.com) Node.js SDK
+## Documents
+[Full documentation is here.](https://globalsmartotp.github.io/nodejs-lib)
 
 ## Simple usage example
 
@@ -28,5 +30,11 @@ otp.sendSMS({
 otp.verify({
   mobile: '09333333333',
   otp: '3305',
+})
+.then(() => {
+  console.log('Code is correct!')
+})
+.catch(() => {
+  console.log('Can not verify')
 })
 ```

@@ -12,6 +12,5 @@
   "includeVersion": true,
   "excludePrivate": true,
   "excludeProtected": true,
-  "theme": "minimal",
-  "watch": true
+  "theme": "minimal"
 }

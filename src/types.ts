@@ -3,6 +3,7 @@ interface RequestOptions {
   language?: string
 }
 
+/** OTP Sending type */
 export type OTPMethod = 'sms' | 'ivr' | 'email' | 'gap'
 export type OTPStatus = 'pending' | 'sent' | 'deliver' | 'failed'
 
@@ -49,8 +50,11 @@ export interface OTPSendResponse {
 }
 
 export interface VerifyRequest {
+  /** The user mobile number country code */
   countryCode?: number
+  /** The user mobile number */
   mobile: string
+  /** The code that user entered */
   otp: string
 }
 
