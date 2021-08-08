@@ -1,6 +1,6 @@
 {
   "name": "gsotp",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "gsotp.com node.js library",
   "main": "dist/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/GlobalSmartOTP/nodejs-lib/issues"
   },
-  "homepage": "https://github.com/GlobalSmartOTP/nodejs-lib#readme",
+  "homepage": "https://globalsmartotp.github.io/nodejs-lib",
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.11",
