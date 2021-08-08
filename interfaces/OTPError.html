@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SendAutomaticInput | gsOTP.com Node.js SDK Documents - v1.2.0</title>
+	<title>OTPError | gsOTP.com Node.js SDK Documents - v1.2.0</title>
 	<meta name="description" content="Documentation for gsOTP.com Node.js SDK Documents - v1.2.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2707,40 +2707,22 @@ img {
 		<li class=" tsd-kind-class tsd-has-type-parameter">
 			<a href="../classes/GsOTP.html" class="tsd-kind-icon">GsOTP</a>
 		</li>
-		<li class=" tsd-kind-interface">
+		<li class="current tsd-kind-interface">
 			<a href="OTPError.html" class="tsd-kind-icon">OTPError</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="OTPError.html#code" class="tsd-kind-icon">code</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="OTPError.html#message" class="tsd-kind-icon">message</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="SendManualyInput.html" class="tsd-kind-icon">Send<wbr>Manualy<wbr>Input</a>
 		</li>
-		<li class="current tsd-kind-interface">
+		<li class=" tsd-kind-interface">
 			<a href="SendAutomaticInput.html" class="tsd-kind-icon">Send<wbr>Automatic<wbr>Input</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a href="SendAutomaticInput.html#templateID" class="tsd-kind-icon">templateID</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a href="SendAutomaticInput.html#countryCode" class="tsd-kind-icon">country<wbr>Code</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a href="SendAutomaticInput.html#mobile" class="tsd-kind-icon">mobile</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a href="SendAutomaticInput.html#param1" class="tsd-kind-icon">param1</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a href="SendAutomaticInput.html#param2" class="tsd-kind-icon">param2</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a href="SendAutomaticInput.html#param3" class="tsd-kind-icon">param3</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a href="SendAutomaticInput.html#expireTime" class="tsd-kind-icon">expire<wbr>Time</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="SendAutomaticInput.html#length" class="tsd-kind-icon">length</a>
-				</li>
-			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="VerifyRequest.html" class="tsd-kind-icon">Verify<wbr>Request</a>
@@ -2771,12 +2753,7 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="tsd-signature-type">SendInputCommon</span>
-					<ul class="tsd-hierarchy">
-						<li>
-							<span class="target">SendAutomaticInput</span>
-						</li>
-					</ul>
+					<span class="target">OTPError</span>
 				</li>
 			</ul>
 		</section>
@@ -2787,14 +2764,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="SendAutomaticInput.html#templateID" class="tsd-kind-icon">templateID</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="SendAutomaticInput.html#countryCode" class="tsd-kind-icon">country<wbr>Code</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="SendAutomaticInput.html#mobile" class="tsd-kind-icon">mobile</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="SendAutomaticInput.html#param1" class="tsd-kind-icon">param1</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="SendAutomaticInput.html#param2" class="tsd-kind-icon">param2</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="SendAutomaticInput.html#param3" class="tsd-kind-icon">param3</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="SendAutomaticInput.html#expireTime" class="tsd-kind-icon">expire<wbr>Time</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="SendAutomaticInput.html#length" class="tsd-kind-icon">length</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="OTPError.html#code" class="tsd-kind-icon">code</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="OTPError.html#message" class="tsd-kind-icon">message</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2802,90 +2773,23 @@ img {
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-				<a name="templateID" class="tsd-anchor"></a>
-				<h3>templateID</h3>
-				<div class="tsd-signature tsd-kind-icon">templateID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="code" class="tsd-anchor"></a>
+				<h3>code</h3>
+				<div class="tsd-signature tsd-kind-icon">code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
-					<p>Inherited from SendInputCommon.templateID</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L16">types.ts:16</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-				<a name="countryCode" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> country<wbr>Code</h3>
-				<div class="tsd-signature tsd-kind-icon">country<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from SendInputCommon.countryCode</p>
-					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L17">types.ts:17</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-				<a name="mobile" class="tsd-anchor"></a>
-				<h3>mobile</h3>
-				<div class="tsd-signature tsd-kind-icon">mobile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from SendInputCommon.mobile</p>
-					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L18">types.ts:18</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-				<a name="param1" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> param1</h3>
-				<div class="tsd-signature tsd-kind-icon">param1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from SendInputCommon.param1</p>
-					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L19">types.ts:19</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-				<a name="param2" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> param2</h3>
-				<div class="tsd-signature tsd-kind-icon">param2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from SendInputCommon.param2</p>
-					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L20">types.ts:20</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-				<a name="param3" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> param3</h3>
-				<div class="tsd-signature tsd-kind-icon">param3<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from SendInputCommon.param3</p>
-					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L21">types.ts:21</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-				<a name="expireTime" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> expire<wbr>Time</h3>
-				<div class="tsd-signature tsd-kind-icon">expire<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from SendInputCommon.expireTime</p>
-					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L22">types.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L11">types.ts:11</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="length" class="tsd-anchor"></a>
-				<h3>length</h3>
-				<div class="tsd-signature tsd-kind-icon">length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<a name="message" class="tsd-anchor"></a>
+				<h3>message</h3>
+				<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L30">types.ts:30</a></li>
+						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/2268680/src/types.ts#L12">types.ts:12</a></li>
 					</ul>
 				</aside>
 			</section>
