@@ -49,7 +49,7 @@ export type SendInput<IsManual extends boolean> = IsManual extends true ? SendMa
 
 /** @ignore */
 export interface OTPSendResponse {
-  referenceID: bigint
+  referenceID: string
 }
 
 export interface VerifyRequest {
@@ -62,7 +62,7 @@ export interface VerifyRequest {
 }
 
 export interface OTPStatusRequest {
-  OTPReferenceID:	bigint
+  OTPReferenceID:	string
 }
 
 export interface OTPStatusResponse {

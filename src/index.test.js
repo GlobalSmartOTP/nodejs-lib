@@ -16,7 +16,7 @@ test('send otp and get its status', () => {
   })
   .then(result => {
     console.log(result)
-    expect(typeof result).toBe('bigint')
+    expect(typeof result).toBe('string')
     return otp.getStatus({ OTPReferenceID: result })
   })
   .then(result => {
@@ -25,7 +25,7 @@ test('send otp and get its status', () => {
 })
 
 test('get otp status', () => {
-  return otp.getStatus({ OTPReferenceID: 1628160593121007556n })
+  return otp.getStatus({ OTPReferenceID: '1628160593121007556' })
     .then(result => {
       console.log(result)
     })

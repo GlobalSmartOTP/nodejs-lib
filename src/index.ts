@@ -1,7 +1,6 @@
 import got from 'got'
-import { parse, stringify } from './jsonBigInt'
-import { SendInput, SendManualyInput, SendAutomaticInput, OTPSendResponse, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPSendRequest, OTPError } from './types'
-export { SendInput, SendManualyInput, SendAutomaticInput, OTPSendResponse, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPSendRequest, OTPError }
+import { SendInput, SendManualyInput, SendAutomaticInput, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPError, OTPSendRequest, OTPSendResponse } from './types'
+export { SendInput, SendManualyInput, SendAutomaticInput, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPError }
 export { OTPMethod, OTPStatus } from './types'
 
 const GSOTP_HOST = 'https://api.gsotp.com'
@@ -49,12 +48,12 @@ export class GsOTP<IsManual extends boolean = false> {
       },
       method: 'post',
       responseType: 'text',
-      body: stringify(body),
+      body: JSON.stringify(body),
     })
       .then(response => {
         let result: { status?: any, error?: any }
         try {
-          result = parse(response.body)
+          result = JSON.parse(response.body)
         } catch (err) {
           return Promise.reject(err)
         }
@@ -67,7 +66,7 @@ export class GsOTP<IsManual extends boolean = false> {
       })
       .catch((error: any) => {
         if (error.response) {
-          try { error = parse(error.response.body) } catch (error) {}
+          try { error = JSON.parse(error.response.body) } catch (error) {}
         }
         if (error.status === 'error' && isGsOTPError(error.error)) {
           return Promise.reject(error.error)
@@ -76,7 +75,7 @@ export class GsOTP<IsManual extends boolean = false> {
       })
   }
 
-  private send(method: OTPSendRequest['method'], options: SendInput<IsManual>): Promise<bigint> { 
+  private send(method: OTPSendRequest['method'], options: SendInput<IsManual>): Promise<string> {
     const body = {
       method,
       smart: false, // not implemented in core.gsotp.com yet!
@@ -92,7 +91,7 @@ export class GsOTP<IsManual extends boolean = false> {
    * @param options Send options
    * @returns Reference ID
    */
-  sendSMS(options: SendInput<IsManual>): Promise<bigint> {
+  sendSMS(options: SendInput<IsManual>): Promise<string> {
     return this.send('sms', options)
   }
   /**
@@ -100,14 +99,14 @@ export class GsOTP<IsManual extends boolean = false> {
    * @param options Send options
    * @returns Reference ID
    */
-  sendIVR(options: SendInput<IsManual>): Promise<bigint> {
+  sendIVR(options: SendInput<IsManual>): Promise<string> {
     return this.send('ivr', options)
   }
   /**
    * Send OTP Code via Gap Messenger ([gap.im](https://gap.im))
    * @returns Reference ID
    */
-  sendGapMessage(options: SendInput<IsManual>): Promise<bigint> {
+  sendGapMessage(options: SendInput<IsManual>): Promise<string> {
     return this.send('gap', options)
   }
 
