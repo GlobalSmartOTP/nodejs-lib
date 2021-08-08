@@ -8,6 +8,7 @@
   "sort": [
     "kind",
     "instance-first",
+    "required-first",
     "source-order"
   ],
   "includeVersion": true,
