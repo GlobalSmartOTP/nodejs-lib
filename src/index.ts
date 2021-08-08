@@ -8,7 +8,7 @@ const GSOTP_HOST = 'https://api.gsotp.com'
 
 /**
  * Check whether an error is a gsOTP standard error or not<br>
- * These objects has two fields: `code` and `message`
+ * These objects have two fields: `code` and `message`
  * @param error The error object to check
  * @returns `error` is a standard gsOTP error
  */
