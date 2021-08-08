@@ -1,6 +1,7 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "name": "gsOTP.com Node.js SDK Documents",
+  "out": "docs/docs",
   "entryPoints": [
     "src/index.ts"
   ],

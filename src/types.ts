@@ -13,7 +13,7 @@ export interface OTPError {
 }
 
 export interface SendInputCommon {
-  templateID: number
+  templateID?: number
   countryCode?: number
   mobile: string
   param1?: string
@@ -44,7 +44,7 @@ export type SendInput<IsManual extends boolean> = IsManual extends true ? SendMa
   param2?: string
   param3?: string
   smart: boolean
-  templateID: number
+  templateID?: number
 }
 
 /** @ignore */
