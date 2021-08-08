@@ -52,7 +52,12 @@ export class GsOTP<IsManual extends boolean = false> {
       body: stringify(body),
     })
       .then(response => {
-        const result = parse(response.body) as unknown as T & { status?: any, error?: any }
+        let result: { status?: any, error?: any }
+        try {
+          result = parse(response.body)
+        } catch (err) {
+          return Promise.reject(err)
+        }
         if (result.error) {
           return Promise.reject(result)
         }
