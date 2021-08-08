@@ -1,13 +1,15 @@
 // @ts-check
 require('dotenv').config()
 const { GsOTP } = require('../dist/index')
-console.log(process.env.API_KEY)
 
-const otp = new GsOTP(process.env.API_KEY, false)
+const mobile = process.env.TEST_PHONE_NUMBER
+const apiKey = process.env.API_KEY
 
-test('send otp', done => {
-  otp.sendSMS({
-    mobile: '09333333333',
+const otp = new GsOTP(apiKey, false)
+
+test('send otp and get its status', () => {
+  return otp.sendSMS({
+    mobile,
     length: 4,
     templateID: 12,
     param1: 'foo'
@@ -15,24 +17,29 @@ test('send otp', done => {
   .then(result => {
     console.log(result)
     expect(typeof result).toBe('bigint')
-    done()
+    return otp.getStatus({ OTPReferenceID: result })
   })
-  .catch(done)
+  .then(result => {
+    console.log(result)
+  })
 })
 
 test('get otp status', () => {
   return otp.getStatus({ OTPReferenceID: 1628160593121007556n })
-    .then(r => {
-      console.log(r)
+    .then(result => {
+      console.log(result)
     })
 })
 
 test('verify otp', () => {
   return otp.verify({
-    mobile: '09333333333',
-    otp: '3305',
+    mobile,
+    otp: '1111',
   })
-    .then(r => {
-      console.log(r)
+    .then(result => {
+      console.log(result)
+    })
+    .catch(error => {
+      expect(typeof error.error.code).toBe('number')
     })
 })
