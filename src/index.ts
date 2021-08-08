@@ -61,8 +61,11 @@ export class GsOTP<IsManual extends boolean = false> {
         return result as T
       })
       .catch((error: any) => {
+        if (error.response) {
+          try { error = parse(error.response.body) } catch (error) {}
+        }
         if (error.status === 'error' && isGsOTPError(error.error)) {
-          Promise.reject(error.error)
+          return Promise.reject(error.error)
         }
         return Promise.reject(error)
       })

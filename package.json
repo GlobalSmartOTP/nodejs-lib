@@ -1,6 +1,6 @@
 {
   "name": "gsotp",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "gsotp.com node.js library",
   "main": "dist/index.js",
   "scripts": {
@@ -17,9 +17,9 @@
     "type": "git",
     "url": "git+https://github.com/GlobalSmartOTP/nodejs-lib.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["otp", "sms", "ivr"],
+  "author": "Mojtaba Ghasemzadeh Tehrany",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/GlobalSmartOTP/nodejs-lib/issues"
   },

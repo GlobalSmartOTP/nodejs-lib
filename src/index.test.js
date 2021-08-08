@@ -43,3 +43,7 @@ test('verify otp', () => {
       expect(isGsOTPError(error)).toBe(true)
     })
 })
+
+test('Is otp error', () => {
+  expect(isGsOTPError({ code: 10321, message: 'OK' })).toBe(true)
+})
