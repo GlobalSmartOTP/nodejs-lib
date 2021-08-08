@@ -7,7 +7,10 @@ interface RequestOptions {
 export type OTPMethod = 'sms' | 'ivr' | 'email' | 'gap'
 export type OTPStatus = 'pending' | 'sent' | 'deliver' | 'failed'
 
-interface GsOtpError {}
+export interface OTPError {
+  code: number
+  message: string
+}
 
 export interface SendInputCommon {
   templateID: number

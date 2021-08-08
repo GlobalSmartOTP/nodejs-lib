@@ -30,6 +30,9 @@ otp.sendSMS({
 
 ## Verify OTP Code
 ```js
+const { GsOTP, isGsOTPError } = require('gsotp')
+const otp = new GsOTP(API_KEY)
+
 otp.verify({
   mobile: '09333333333',
   otp: '3305',
@@ -37,7 +40,33 @@ otp.verify({
 .then(() => {
   console.log('Code is correct!')
 })
-.catch(() => {
-  console.log('Can not verify')
+.catch(error => {
+  // handle Error
+  if (isGsOTPError(error)) {
+    console.log(`Error ${error.code}: ${error.message}`)
+  } else {
+    // unknown error
+    console.error(error)
+  }
 })
+```
+
+## Use async functions
+```js
+async function send() {
+  try {
+    const result = await otp.getStatus({ OTPReferenceID: 1628960593121007556n })
+    console.log('Method: ' + result.OTPMethod)
+    console.log('Status: ' + result.OTPStatus)
+    console.log('Verified: ' + result.OTPVerified)
+  } catch (error) {
+    if (isGsOTPError(error)) {
+      console.log(`Error ${error.code}: ${error.message}`)
+    } else {
+      console.error(error)
+    }
+  }
+}
+
+send()
 ```

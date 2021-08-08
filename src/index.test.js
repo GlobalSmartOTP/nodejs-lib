@@ -1,6 +1,6 @@
 // @ts-check
 require('dotenv').config()
-const { GsOTP } = require('../dist/index')
+const { GsOTP, isGsOTPError } = require('../dist/index')
 
 const mobile = process.env.TEST_PHONE_NUMBER
 const apiKey = process.env.API_KEY
@@ -40,6 +40,6 @@ test('verify otp', () => {
       console.log(result)
     })
     .catch(error => {
-      expect(typeof error.error.code).toBe('number')
+      expect(isGsOTPError(error)).toBe(true)
     })
 })

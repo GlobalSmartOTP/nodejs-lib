@@ -1,10 +1,20 @@
 import got from 'got'
 import { parse, stringify } from './jsonBigInt'
-import { SendInput, SendManualyInput, SendAutomaticInput, OTPSendResponse, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPSendRequest } from './types'
-export { SendInput, SendManualyInput, SendAutomaticInput, OTPSendResponse, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPSendRequest }
+import { SendInput, SendManualyInput, SendAutomaticInput, OTPSendResponse, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPSendRequest, OTPError } from './types'
+export { SendInput, SendManualyInput, SendAutomaticInput, OTPSendResponse, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPSendRequest, OTPError }
 export { OTPMethod, OTPStatus } from './types'
 
 const GSOTP_HOST = 'https://api.gsotp.com'
+
+/**
+ * Check whether an error is a gsOTP standard error or not<br>
+ * These objects has two fields: `code` and `message`
+ * @param error The error object to check
+ * @returns `error` is a standard gsOTP error
+ */
+export function isGsOTPError(error: any): error is OTPError {
+  return !!(error && error.code && error.message && error.constructor === Object)
+}
 
 export class GsOTP<IsManual extends boolean = false> {
   /**
@@ -49,6 +59,12 @@ export class GsOTP<IsManual extends boolean = false> {
         delete result.status
         delete result.error
         return result as T
+      })
+      .catch((error: any) => {
+        if (error.status === 'error' && isGsOTPError(error.error)) {
+          Promise.reject(error.error)
+        }
+        return Promise.reject(error)
       })
   }
 
