@@ -9,7 +9,26 @@
 npm install gsotp
 ```
 
-## Send OTP Code
+## Send OTP Code Via **WhatsApp Messenger**
+```js
+const { GsOTP } = require('gsotp')
+const otp = new GsOTP(API_KEY)
+
+otp.sendWhatsAppMessage({
+  mobile: '09333333333',
+  templateID: 12,
+  param1: 'Foo',
+  length: 4,
+})
+.then(referenceID => {
+  console.log(referenceID)
+})
+.catch(error => {
+  console.error(error)
+})
+```
+
+## Send OTP Code Via **SMS**
 ```js
 const { GsOTP } = require('gsotp')
 const otp = new GsOTP(API_KEY)
