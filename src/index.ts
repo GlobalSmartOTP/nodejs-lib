@@ -1,5 +1,5 @@
 import got from 'got'
-import { SendInput, SendManualyInput, SendAutomaticInput, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPError, OTPSendRequest, OTPSendResponse } from './types'
+import { SendInput, SendManualyInput, SendAutomaticInput, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPError, OTPSendRequest, OTPSendResponse, MessengerProvider } from './types'
 export { SendInput, SendManualyInput, SendAutomaticInput, VerifyRequest, OTPStatusRequest, OTPStatusResponse, OTPError }
 export { OTPMethod, OTPStatus } from './types'
 
@@ -107,7 +107,15 @@ export class GsOTP<IsManual extends boolean = false> {
    * @returns Reference ID
    */
   sendGapMessage(options: SendInput<IsManual>): Promise<string> {
-    return this.send('gap', options)
+    return this.send('messenger', { ...options, provider: MessengerProvider.Gap })
+  }
+
+  /**
+   * Send OTP Code via WhatsApp Messenger ([whatsapp.com](https://www.whatsapp.com))
+   * @returns Reference ID
+   */
+  sendWhatsAppMessage(options: SendInput<IsManual>): Promise<string> {
+    return this.send('messenger', { ...options, provider: MessengerProvider.WhatsApp })
   }
 
   /**

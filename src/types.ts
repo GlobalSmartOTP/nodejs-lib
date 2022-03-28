@@ -4,8 +4,15 @@ interface RequestOptions {
 }
 
 /** OTP Sending type */
-export type OTPMethod = 'sms' | 'ivr' | 'email' | 'gap'
+export type OTPMethod = 'sms' | 'ivr' | 'messenger'
 export type OTPStatus = 'pending' | 'sent' | 'deliver' | 'failed'
+
+export enum MessengerProvider {
+  /** from WhatsApp Messenger */
+  WhatsApp = 1,
+  /** from Gap Messenger (https://gap.im) */
+  Gap = 2
+}
 
 export interface OTPError {
   code: number
@@ -44,6 +51,7 @@ export type SendInput<IsManual extends boolean> = IsManual extends true ? SendMa
   param2?: string
   param3?: string
   smart: boolean
+  provider?: number
   templateID?: number
 }
 
