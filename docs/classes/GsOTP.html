@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>GsOTP | gsOTP.com Node.js SDK Documents - v1.2.5</title>
-	<meta name="description" content="Documentation for gsOTP.com Node.js SDK Documents - v1.2.5">
+	<title>GsOTP | gsOTP.com Node.js SDK Documents - v1.3.0</title>
+	<meta name="description" content="Documentation for gsOTP.com Node.js SDK Documents - v1.3.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
   --color-background: #fdfdfd;
@@ -2674,7 +2674,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="../index.html">gsOTP.com Node.js SDK Documents - v1.2.5</a></strong>
+					<strong><a href="../index.html">gsOTP.com Node.js SDK Documents - v1.3.0</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2718,6 +2718,9 @@ img {
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="GsOTP.html#sendGapMessage" class="tsd-kind-icon">send<wbr>Gap<wbr>Message</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="GsOTP.html#sendWhatsAppMessage" class="tsd-kind-icon">send<wbr>Whats<wbr>App<wbr>Message</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="GsOTP.html#verify" class="tsd-kind-icon">verify</a>
@@ -2793,6 +2796,7 @@ img {
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="GsOTP.html#sendSMS" class="tsd-kind-icon">sendSMS</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="GsOTP.html#sendIVR" class="tsd-kind-icon">sendIVR</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="GsOTP.html#sendGapMessage" class="tsd-kind-icon">send<wbr>Gap<wbr>Message</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="GsOTP.html#sendWhatsAppMessage" class="tsd-kind-icon">send<wbr>Whats<wbr>App<wbr>Message</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="GsOTP.html#verify" class="tsd-kind-icon">verify</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="GsOTP.html#getStatus" class="tsd-kind-icon">get<wbr>Status</a></li>
 						</ul>
@@ -2812,7 +2816,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/index.ts#L24">index.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L24">index.ts:24</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2865,7 +2869,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/index.ts#L94">index.ts:94</a></li>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L94">index.ts:94</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2897,7 +2901,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/index.ts#L102">index.ts:102</a></li>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L102">index.ts:102</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2929,12 +2933,41 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/index.ts#L109">index.ts:109</a></li>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L109">index.ts:109</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Send OTP Code via Gap Messenger (<a href="https://gap.im">gap.im</a>)</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>options: <a href="../modules.html#SendInput" class="tsd-signature-type" data-tsd-kind="Type alias">SendInput</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IsManual</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>Reference ID</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="sendWhatsAppMessage" class="tsd-anchor"></a>
+				<h3>send<wbr>Whats<wbr>App<wbr>Message</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">send<wbr>Whats<wbr>App<wbr>Message<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../modules.html#SendInput" class="tsd-signature-type" data-tsd-kind="Type alias">SendInput</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IsManual</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L117">index.ts:117</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Send OTP Code via WhatsApp Messenger (<a href="https://www.whatsapp.com">whatsapp.com</a>)</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2958,7 +2991,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/index.ts#L117">index.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L125">index.ts:125</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2987,7 +3020,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/index.ts#L126">index.ts:126</a></li>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L134">index.ts:134</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>gsOTP.com Node.js SDK Documents - v1.2.5 | gsOTP.com Node.js SDK Documents - v1.2.5</title>
-	<meta name="description" content="Documentation for gsOTP.com Node.js SDK Documents - v1.2.5">
+	<title>gsOTP.com Node.js SDK Documents - v1.3.0 | gsOTP.com Node.js SDK Documents - v1.3.0</title>
+	<meta name="description" content="Documentation for gsOTP.com Node.js SDK Documents - v1.3.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
   --color-background: #fdfdfd;
@@ -2674,7 +2674,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">gsOTP.com Node.js SDK Documents - v1.2.5</a></strong>
+					<strong><a href="index.html">gsOTP.com Node.js SDK Documents - v1.3.0</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2755,8 +2755,27 @@ img {
 			</a>
 			<pre><code class="language-bash"><span style="color: #000000">npm install gsotp</span>
 </code></pre>
-			<a href="#send-otp-code" id="send-otp-code" style="color: inherit; text-decoration: none;">
-				<h2>Send OTP Code</h2>
+			<a href="#send-otp-code-via-whatsapp-messenger" id="send-otp-code-via-whatsapp-messenger" style="color: inherit; text-decoration: none;">
+				<h2>Send OTP Code Via <strong>WhatsApp Messenger</strong></h2>
+			</a>
+			<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">GsOTP</span><span style="color: #000000"> } = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;gsotp&#039;</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">otp</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">GsOTP</span><span style="color: #000000">(</span><span style="color: #0070C1">API_KEY</span><span style="color: #000000">)</span>
+
+<span style="color: #001080">otp</span><span style="color: #000000">.</span><span style="color: #795E26">sendWhatsAppMessage</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">mobile:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;09333333333&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">templateID:</span><span style="color: #000000"> </span><span style="color: #098658">12</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">param1:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Foo&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">length:</span><span style="color: #000000"> </span><span style="color: #098658">4</span><span style="color: #000000">,</span>
+<span style="color: #000000">})</span>
+<span style="color: #000000">.</span><span style="color: #795E26">then</span><span style="color: #000000">(</span><span style="color: #001080">referenceID</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">referenceID</span><span style="color: #000000">)</span>
+<span style="color: #000000">})</span>
+<span style="color: #000000">.</span><span style="color: #795E26">catch</span><span style="color: #000000">(</span><span style="color: #001080">error</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">error</span><span style="color: #000000">(</span><span style="color: #001080">error</span><span style="color: #000000">)</span>
+<span style="color: #000000">})</span>
+</code></pre>
+			<a href="#send-otp-code-via-sms" id="send-otp-code-via-sms" style="color: inherit; text-decoration: none;">
+				<h2>Send OTP Code Via <strong>SMS</strong></h2>
 			</a>
 			<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">GsOTP</span><span style="color: #000000"> } = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;gsotp&#039;</span><span style="color: #000000">)</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">otp</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">GsOTP</span><span style="color: #000000">(</span><span style="color: #0070C1">API_KEY</span><span style="color: #000000">)</span>
@@ -2862,10 +2881,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-type-alias">
 				<a name="OTPMethod" class="tsd-anchor"></a>
 				<h3>OTPMethod</h3>
-				<div class="tsd-signature tsd-kind-icon">OTPMethod<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;sms&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ivr&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;email&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gap&quot;</span></div>
+				<div class="tsd-signature tsd-kind-icon">OTPMethod<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;sms&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ivr&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;messenger&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/types.ts#L7">types.ts:7</a></li>
+						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/types.ts#L7">types.ts:7</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2880,7 +2899,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">OTPStatus<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;pending&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;sent&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;deliver&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;failed&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/types.ts#L8">types.ts:8</a></li>
+						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/types.ts#L8">types.ts:8</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2890,7 +2909,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Send<wbr>Input&lt;IsManual&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IsManual</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> ? </span><a href="interfaces/SendManualyInput.html" class="tsd-signature-type" data-tsd-kind="Interface">SendManualyInput</a><span class="tsd-signature-symbol"> : </span><a href="interfaces/SendAutomaticInput.html" class="tsd-signature-type" data-tsd-kind="Interface">SendAutomaticInput</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/types.ts#L33">types.ts:33</a></li>
+						<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/types.ts#L40">types.ts:40</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2913,7 +2932,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/bcbf19e/src/index.ts#L14">index.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/GlobalSmartOTP/nodejs-lib/blob/d88b001/src/index.ts#L14">index.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
