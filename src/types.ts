@@ -5,7 +5,7 @@ interface RequestOptions {
 
 /** OTP Sending type */
 export type OTPMethod = 'sms' | 'ivr' | 'messenger'
-export type OTPStatus = 'pending' | 'sent' | 'deliver' | 'failed'
+export type OTPStatus = 'pending' | 'sent' | 'seen' | 'operatorDelivered' | 'deliver' | 'failed'
 
 export enum MessengerProvider {
   /** from WhatsApp Messenger */
