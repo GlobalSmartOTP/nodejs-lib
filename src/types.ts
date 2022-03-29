@@ -5,7 +5,17 @@ interface RequestOptions {
 
 /** OTP Sending type */
 export type OTPMethod = 'sms' | 'ivr' | 'messenger'
-export type OTPStatus = 'pending' | 'sent' | 'seen' | 'operatorDelivered' | 'deliver' | 'failed'
+
+/**
+ * OTP Status types
+ * 'pending': OTP not yet sent
+ * 'operatorDelivered': OTP sent to operator and waiting for delivery
+ * 'sent': User recieved OTP
+ * 'seen': OTP is seen by user (in messenger mode)
+ * 'notDelivered': OTP not delivered by operator
+ * 'failed': OTP failed to be delivered to operator
+ */
+export type OTPStatus = 'pending' | 'sent' | 'seen' | 'operatorDelivered' | 'notDelivered' | 'failed'
 
 export enum MessengerProvider {
   /** from WhatsApp Messenger */
